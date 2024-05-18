@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">G4UltimateMobile</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="pop_up">Pop Up</string>
+</resources>
