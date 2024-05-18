@@ -48,6 +48,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <Button
+                    android:id="@+id/pop_up_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="13sp"
@@ -75,10 +76,10 @@
                         android:id="@+id/text_package"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="16dp"
                         android:text="Package: [Package Name]"
                         android:textAlignment="center"
-                        android:textSize="18sp" />
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/text_minutes"
@@ -151,33 +152,16 @@
                         android:id="@+id/text_transaction_history"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="16dp"
                         android:text="Transaction History"
                         android:textAlignment="center"
-                        android:textSize="18sp" />
+                        android:textSize="24sp" />
 
                     <LinearLayout
                         android:id="@+id/transaction_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-
-                        <!-- Example transaction items -->
-                        <TextView
-                            android:id="@+id/transaction_1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:text="Transaction 1: $10.00 - 01/01/2023"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/transaction_2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:text="Transaction 2: $5.00 - 02/01/2023"
-                            android:textSize="16sp" />
 
                         <!-- Add more transactions as needed -->
                     </LinearLayout>

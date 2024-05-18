@@ -8,9 +8,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import cy.nup.g4ultimatemobile.data.model.User
 import cy.nup.g4ultimatemobile.data.repository.UserRepository
+import cy.nup.g4ultimatemobile.data.repository.UserRepositoryProvider
 
 class HomeViewModel : ViewModel() {
-    private val userRepository: UserRepository = UserRepository()
+    private val userRepository by lazy { UserRepositoryProvider.userRepository }
 
     private val _text = MutableLiveData<String>().apply {
         value = "Welcome to our new app, ${userRepository.userName()}!"
@@ -73,6 +74,4 @@ class HomeViewModel : ViewModel() {
         }
 
     }
-
-
 }

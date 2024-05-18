@@ -35,4 +35,20 @@ class UserRepository {
 
     fun packageName(): String = user.packageType.packageName
     fun allTransactions(): List<String> = transactions.map { it.toString() }
+    fun popUp(amount: Long) {
+        // ask bank
+        user.balance += amount
+    }
+
+    fun setPackage(packageType: PackageType) {
+        if (packageType.price > user.balance) {
+            // please pop up
+            return
+        }
+        user.balance -= packageType.price
+        user.packageType = packageType
+        user.minutesUsed = 0
+        user.smsUsed = 0
+        user.internetUsed = 0
+    }
 }

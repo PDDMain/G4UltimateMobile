@@ -4,12 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import cy.nup.g4ultimatemobile.data.model.PackageType
+import cy.nup.g4ultimatemobile.data.repository.UserRepositoryProvider
 import cy.nup.g4ultimatemobile.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
+    private val userRepository by lazy { UserRepositoryProvider.userRepository }
 
     private var _binding: FragmentDashboardBinding? = null
 
@@ -22,16 +26,22 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
-
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        val buttonSelectBasic: Button = binding.buttonSelectBasic
+        val buttonSelectAdvanced: Button = binding.buttonSelectAdvanced
+        val buttonSelectVip: Button = binding.buttonSelectVip
+        buttonSelectBasic.setOnClickListener {
+            userRepository.setPackage(PackageType.BASIC)
         }
+        buttonSelectAdvanced.setOnClickListener {
+            userRepository.setPackage(PackageType.ADVANCED)
+        }
+        buttonSelectVip.setOnClickListener {
+            userRepository.setPackage(PackageType.VIP)
+        }
+
         return root
     }
 
