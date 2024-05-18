@@ -1,18 +1,16 @@
-package cy.nup.g4ultimatemobile.ui.dashboard
+package cy.nup.g4ultimatemobile.ui.packages
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import cy.nup.g4ultimatemobile.data.model.PackageType
 import cy.nup.g4ultimatemobile.data.repository.UserRepositoryProvider
 import cy.nup.g4ultimatemobile.databinding.FragmentDashboardBinding
 
-class DashboardFragment : Fragment() {
+class PackagesFragment : Fragment() {
     private val userRepository by lazy { UserRepositoryProvider.userRepository }
 
     private var _binding: FragmentDashboardBinding? = null

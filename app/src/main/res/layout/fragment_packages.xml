@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.notifications.NotificationsFragment">
+    tools:context=".ui.packages.PackagesFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,16 +12,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Support Service"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:paddingBottom="16dp"/>
-
-        <!-- Contact via Phone -->
+        <!-- Basic Package -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +29,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Contact via Phone"
+                    android:text="Basic Package"
+                    android:textAlignment="center"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp"/>
@@ -46,125 +38,141 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Call us at: +1-800-123-4567"
-                    android:paddingBottom="8dp"/>
-
-                <Button
-                    android:id="@+id/button_call_support"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Call Support"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Contact via Email -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Contact via Email"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:paddingBottom="8dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Email us at: support@example.com"
-                    android:paddingBottom="8dp"/>
-
-                <Button
-                    android:id="@+id/button_email_support"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Email Support"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Contact via Chat -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Contact via Chat"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:paddingBottom="8dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Chat with our support team"
-                    android:paddingBottom="8dp"/>
-
-                <Button
-                    android:id="@+id/button_chat_support"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Chat Support"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- FAQs -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Frequently Asked Questions"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:paddingBottom="8dp"/>
-
-                <!-- Example FAQ Item -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Q: How can I reset my password?"
+                    android:text="Minutes: 100"
                     android:paddingBottom="4dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="A: You can reset your password by going to the settings page and selecting 'Reset Password'."
+                    android:text="SMS: 50"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Internet: 10GB"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Price: $20"
                     android:paddingBottom="8dp"/>
 
-                <!-- Add more FAQs as needed -->
+                <Button
+                    android:id="@+id/button_select_basic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Basic Package"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
+        <!-- Advanced Package -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Advanced Package"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Minutes: 1000"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SMS: 100"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Internet: 40GB"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Price: $40"
+                    android:paddingBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/button_select_advanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Advanced Package"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- VIP Package -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="VIP Package"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Minutes: 10000"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SMS: 1000"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Internet: 100GB"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Price: $100"
+                    android:paddingBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/button_select_vip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select VIP Package"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

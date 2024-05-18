@@ -26,10 +26,6 @@ class PopupFragment : Fragment() {
         _binding = PopupLayoutBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.cancelButton.setOnClickListener {
-            switchToHomeFragment(inflater, container)
-        }
-
         binding.submitButton.setOnClickListener {
             val amount: Long = binding.amountEditText.text.toString().toLongOrNull() ?: 0L
             // check bank balance
